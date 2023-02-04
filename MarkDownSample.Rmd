@@ -1,0 +1,96 @@
+---
+title: "MarkDownSample"
+output: bookdown::html_document2
+date: "`r Sys.Date()`"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# This is a header level *1*
+Here are some basic text..  
+under first header
+
+## This is a header level *2*
+Some __header level 2__ text
+
+inline equation: $A = \pi*r^{2}$
+
+```{r, out.width = "100px", fig.align='left', fig.cap="\\label{fig:figs}cap for image", echo=FALSE}
+knitr::include_graphics("C:\\Users\\juho\\Downloads\\Playing Cards\\Playing Cards\\PNG-cards-1.3\\2_of_diamonds.png")
+```
+
+bookdown keeps track of the numbering
+
+```{r, out.width = "100px", fig.align='left', fig.cap="\\label{fig:figs}cap for image", echo=FALSE}
+knitr::include_graphics("C:\\Users\\juho\\Downloads\\Playing Cards\\Playing Cards\\PNG-cards-1.3\\2_of_diamonds.png")
+```
+
+### embedding code with code showing
+```{r}
+summary(cars)
+```
+
+### embedding code with code not showing
+```{r, echo=FALSE}
+summary(cars)
+```
+
+## You can do lists also
+1. First item
+2. Second item
+    + using plus
+    - using -
+    * using *
+    * 3\. use backslash if you need a number with a dash
+3. Third item
+    1. Indented item
+    2. Indented item
+1. Numbering should still work
+    * ~~even the numbers~~
+    * ***are labeled wrong!***
+    
+This is a code block
+
+    <html>
+      <head>
+        <title>Test</title>
+      </head>
+
+Another code block with Python syntax
+
+    for index, i in enumerate(my_collection):
+      print(index, i)
+
+
+This is a horizontal rule
+
+---
+
+It can be used to separate sections
+
+## Lets plot something!
+### Single plot
+
+This plot contains only one figure
+
+```{r, echo=FALSE}
+plot(cars)
+```
+
+### Multi plot
+
+This plot contains multiple figures
+
+```{r, fig.show="hold", out.width="50%", echo=FALSE}
+plot(cars)
+plot(cars, pch = 19)
+```
+
+
+## Adding links
+
+This is my [GitHub](https://github.com/holle1234).
+
+
